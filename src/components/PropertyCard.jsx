@@ -2,20 +2,25 @@ import React from "react";
 
 const PropertyCard = ({property}) => {
 
-    const {type,bedrooms, tenure, picture, location, added} = property;
-    const firstPicture = picture[0];
-    const pictureName = firstPicture.split("/").pop();
-    return (
+    return(
+        <div className="Propertycard">
+            <div className="CardImage">
+                <img src={property.image} alt={property.title} />
+            </div>
+            <div className="CardInfo">
+                <h3 className="PropPrice">${property.price.toLocaleString()}</h3>  {/*to make number readable*/}
+                <h4>{property.bedrooms} Bedroom {property.type}</h4>
+                <p className="popLocation">{property.location}</p>
 
-        <section>
-            <img src={firstPicture} alt={pictureName}/>
-            <h3>Type: {type}</h3>
-            <h3>Bedrooms: {bedrooms}</h3>
-            <h4>Tenure: {tenure}</h4>
-            <h4>Location: {location}</h4>
-            <h4>Added: {added.month} {added.day}, {added.year}</h4>
-            <button>Add to Favourites</button>
-        </section>
+                <div className="CardDetails">
+                    <span>🛏 {property.bedrooms} beds</span>
+                    <span>🏠 {property.type}</span>
+                </div>
+
+                <button className="btn-view">View Details</button>
+
+            </div>
+        </div>
     );
 }
 
