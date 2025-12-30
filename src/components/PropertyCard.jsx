@@ -1,13 +1,21 @@
 import React from "react";
 
-const PropertyCard = ({property}) => {
+const PropertyCard = ({property, onAddToFavourites}) => {
 
     return(
         <div className="Propertycard">
+
             <div className="CardImage">
                 <img src={property.image} alt={property.title} />
+
+                <div className="favourite-icon"
+                     onClick={() => onAddToFavourites(property)}>
+                    Add Favourite
+                </div>
             </div>
+
             <div className="CardInfo">
+                
                 <h3 className="PropPrice">${property.price.toLocaleString()}</h3>  {/*to make number readable*/}
                 <h4>{property.bedrooms} Bedroom {property.type}</h4>
                 <p className="popLocation">{property.location}</p>
