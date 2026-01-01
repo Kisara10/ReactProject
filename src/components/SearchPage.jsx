@@ -26,6 +26,14 @@ const SearchPage = () => {
         if (!favorites.find(fav => fav.id === property.id)) {
             setFavorites([...favorites, property]);
         }
+    };
+
+    const removeFromFavorites = (property) => {
+        setFavorites(favorites.filter(fav => fav.id === property.id));
+    };
+
+    const clearFavorites = () => {
+        setFavorites([]);
     }
 
 
@@ -35,6 +43,8 @@ const SearchPage = () => {
                 <h1>Property Search</h1>
                 <h3>Welcome to Property Search we will help you to find your dream house </h3>
             </header>
+
+            <div className=""></div>
             <SearchBar />
         </div>
     )
