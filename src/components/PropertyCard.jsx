@@ -15,7 +15,7 @@ const PropertyCard = ({property, onAddToFavourites}) => {
             </div>
 
             <div className="CardInfo">
-                
+
                 <h3 className="PropPrice">${property.price.toLocaleString()}</h3>  {/*to make number readable*/}
                 <h4>{property.bedrooms} Bedroom {property.type}</h4>
                 <p className="popLocation">{property.location}</p>
