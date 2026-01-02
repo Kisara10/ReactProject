@@ -2,40 +2,23 @@ import React from "react";
 
 const FavouriteList = ({favourites, onRemove, onClear}) => {
     return (
-        <div className="Favourites-sidebar">
-            <h2>
-                My Favourites
-                <span className="badge">{favourites.length}</span>
-            </h2>
+        <div className="Favourite-List">
+            <h3>My Favourites ({favourites.length})</h3>
 
-            <div className="favourites-list">
-                {favourites.length === 0 ? (
-                    <div className="empty-list">
-                        <p>No Favourites yet</p>
-                        <p>Click the heart icon to save properties</p>
-                    </div>
-                ):(
-                    favourites.map((property) => (
-                        <div key={property.id} className="favourite-item">
-                            <span>
-                                {property.name} Name {property.bedrooms} Bed {property.type} - ${property.price.toLocaleString()}
-                            </span>
-                            <span
-                                className="remove-icon"
-                                onClick={() => onRemove(property.id)}>
-                                X
-                            </span>
-                        </div>
-                    ))
-                )}
-            </div>
+            {favourites.length === 0 && <p>No Favourites</p>}
 
-            <button
-                className="btn-clear"
-                onClick={onClear}
-                disabled={favourites.length === 0}>     {/*Disables when favourite array is empty*/}
-                Clear All Favourites
-            </button>
+            {favourites.map(property => (
+                <div key={property.id}>
+                    <span>
+                        {property.bedrooms} Bed {property.type} ${property.price.toLocaleString()}
+                    </span>
+                    <button onClick={() => onRemove(property.id)}>Remove</button>
+                </div>
+            ))}
+
+            {favourites.length > 0 && (
+                <button onClick={onClear}>Clear All</button>
+            )}
         </div>
     );
 }

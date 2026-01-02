@@ -5,29 +5,16 @@ const PropertyCard = ({property, onAddToFavourites}) => {
     return(
         <div className="Propertycard">
 
-            <div className="CardImage">
-                <img src={property.image} alt={property.title} />
+            <img src={property.picture[0]} alt="property" />
 
-                <div className="favourite-icon"
-                     onClick={() => onAddToFavourites(property)}>
-                    Add Favourite
-                </div>
-            </div>
+            <h3>${property.price.toLocaleString()}</h3>
+            <p>{property.bedrooms} Bedroom {property.type}</p>
+            <p>{property.location}</p>
 
-            <div className="CardInfo">
+            <button onClick={() => onAddToFavourites(property)}>
+                Add to Favourites
+            </button>
 
-                <h3 className="PropPrice">${property.price.toLocaleString()}</h3>  {/*to make number readable*/}
-                <h4>{property.bedrooms} Bedroom {property.type}</h4>
-                <p className="popLocation">{property.location}</p>
-
-                <div className="CardDetails">
-                    <span>🛏 {property.bedrooms} beds</span>
-                    <span>🏠 {property.type}</span>
-                </div>
-
-                <button className="btn-view">View Details</button>
-
-            </div>
         </div>
     );
 }

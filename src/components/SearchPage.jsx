@@ -6,40 +6,39 @@ import FavouriteList from "./FavouriteList.jsx";
 const SearchPage = () => {
 
     const [properties, setProperties] = useState([]);
-    const [filter, setFilter] = useState([]);
-    const [favorites, setFavorites] = useState([]);
+    const [filtered, setFiltered] = useState([]);
+    const [favourites, setFavourites] = useState([]);
 
     useEffect(() => {
-        const fetchProperties = async () => {
-            const response = await fetch("/properties(1).json");
-            const data = await response.json();
-            setProperties(data.properties);
-            setFilter(data.properties);
-        };
-        fetchProperties();
+        fetch("/Properties(1).json")
+            .then(res => res.json())
+            .then(data =>{
+                setProperties(data.properties);
+                setFiltered(data.properties);
+        });
     }, []);
 
     /* Search function, search properties based on searchers */
-    const handleSeacrch = (filters) => {
-        setFilter(properties);
+    const handleSearch = () => {
+        setFiltered(properties);
     };
 
     /* Add to favourites */
-    const addToFavorites = (property) => {
+    const addToFavourites = (property) => {
         /* Check if property already in favourites */
-        if (!favorites.find(fav => fav.id === property.id)) {
-            setFavorites([...favorites, property]);
+        if (!favourites.find(fav => fav.id === property.id)) {
+            setFavourites([...favourites, property]);
         }
     };
 
     /* Remove form favourites */
-    const removeFromFavorites = (property) => {
-        setFavorites(favorites.filter(fav => fav.id === property.id));
+    const removeFromFavourites = (id) => {
+        setFavourites(favourites.filter(fav => fav.id !== id));
     };
 
     /* Clear all favourites */
-    const clearFavorites = () => {
-        setFavorites([]);
+    const clearFavourites = () => {
+        setFavourites([]);
     };
 
     return (
@@ -50,16 +49,16 @@ const SearchPage = () => {
             </header>
 
             <div className="main-content">
-                <SearchBar onSearch={handleSeacrch} />
+                <SearchBar onSearch={handleSearch} />
 
                 <PropertyList
-                    properties={filter}
-                    onAddToFavourites={addToFavorites}/>
+                    properties={filtered}
+                    onAddToFavourites={addToFavourites}/>
 
                 <FavouriteList
-                    favorites={favorites}
-                    onRemove={removeFromFavorites}
-                    onClear={clearFavorites}/>
+                    favourites={favourites}
+                    onRemove={removeFromFavourites}
+                    onClear={clearFavourites}/>
             </div>
         </div>
     );

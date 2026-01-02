@@ -10,11 +10,11 @@ const PropertyList = ({properties, onAddToFavourites}) => {
             </div>
 
             <div className="property-grid">
-                {properties.map((property) => (
+                {properties.map(property => (
                     <PropertyCard
-                    key={property.id}
-                    property={property}
-                    onAddToFavourites={onAddToFavourites} />
+                        key={property.id}
+                        property={property}
+                        onAddToFavourites={onAddToFavourites} />
                 ))}
             </div>
 
