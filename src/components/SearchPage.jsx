@@ -10,7 +10,7 @@ const SearchPage = () => {
     const [favourites, setFavourites] = useState([]);
 
     useEffect(() => {
-        fetch("/Properties(1).json")
+        fetch("/properties(1).json")
             .then(res => res.json())
             .then(data =>{
                 setProperties(data.properties);

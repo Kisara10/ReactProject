@@ -1,10 +1,11 @@
 import React from "react";
-import SearchBar from "./components/SearchBar.jsx";
+import SearchPage from "./components/SearchPage.jsx";
+
 
 function App() {
     return (
         <div>
-            <SearchBar />
+            <SearchPage />
         </div>
     );
 }

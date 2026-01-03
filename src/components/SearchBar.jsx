@@ -27,24 +27,13 @@ const SearchBar = () => {
                 </div>
 
                 <div className="form">
-                    <label htmlFor="minBedrooms">Bedrooms: </label>
-                    <input type="number" id="minbedrooms" name="minbedrooms" min="1" />
-                </div>
-
-                <div className="form">
-                    <label htmlFor="maxBedrooms">Bedrooms: </label>
-                    <input type="number" id="maxbedrooms" name="maxbedrooms" min="1" />
+                    <label htmlFor="Bedrooms">Bedrooms: </label>
+                    <input type="number" id="bedrooms" name="minbedrooms" min="1" />
                 </div>
 
                 <div className="form">
                     <label htmlFor="dateAdded">Date Added </label>
                     <input type="date" id="dateAdded" name="dateAdded" />
-                </div>
-
-
-                <div className="form">
-                    <label htmlFor="postCode">Postcode Area: </label>
-                    <input type="text" id="postCode" name="postCode" placeholder="BR1"/>
                 </div>
 
                 <button type="submit">Search</button>
