@@ -8,7 +8,7 @@ const PropertyTabs = ({property}) => {
 
             <div className="Tab-buttons">
                 <button onClick={() => setActiveTab("description")}>Description</button>
-                <button onClick={() => setActiveTab("added")}>Details</button>
+                <button onClick={() => setActiveTab("details")}>Details</button>
                 <button onClick={() => setActiveTab("location")}>Location</button>
             </div>
 
@@ -17,10 +17,13 @@ const PropertyTabs = ({property}) => {
                     <p>{property.description}</p>
                 )}
 
-                {activeTab === "added" && (
+                {activeTab === "details" && (
                     <ul>
+                        <li>Type: {property.type}</li>
+                        <li>Bedrooms: {property.bedrooms}</li>
+                        <li>Tenure: {property.tenure}</li>
                         <li>
-                            Added:
+                            Added: {property.added.day} {property.added.month} {property.add.year}
                         </li>
                     </ul>
                 )}
