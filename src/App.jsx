@@ -2,6 +2,7 @@ import React from "react";
 import SearchPage from "./components/SearchPage.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import PropertyDetails from "./components/PropertyDetails.jsx";
+import "./App.css";
 
 
 function App() {

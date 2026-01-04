@@ -31,12 +31,157 @@
 			"tenure":"Freehold",
 			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
 			"location":"Crofton Road Orpington BR6",
-			"picture":"images/prop2pic1small.jpg",
+			"picture":[
+              "/images/prop2pic1small.jpg",
+              "/images/prop2pic2small.jpg",
+              "/images/prop2pic3small.jpg",
+              "/images/prop2pic4small.jpg",
+              "/images/prop2pic5small.jpg",
+              "/images/prop2pic6small.jpg"
+            ],
 			"url":"properties/prop2.html",
             "added": {
                 "month":"September",
                 "day":14,
                 "year":2022
             }
+        },
+        {
+          "id":"prop3",
+          "type":"House",
+          "bedrooms":4,
+          "price":625000,
+          "tenure":"Freehold",
+          "description":"Spacious four bedroom detached family home located in a quiet residential area. This well-maintained property features a bright and airy entrance hall, large living room with feature fireplace, separate dining room, and a modern fitted kitchen with breakfast area. The first floor comprises four good-sized bedrooms, with the master bedroom benefiting from fitted wardrobes and an en-suite shower room. The family bathroom has been recently refurbished. Outside, there is a generous rear garden with patio area, perfect for entertaining, and a driveway providing parking for multiple vehicles. The property also benefits from a single garage.",
+          "location":"High Street, Bromley",
+          "picture":[
+            "/images/prop3pic1small.jpg",
+            "/images/prop3pics2mall.jpg",
+            "/images/prop3pics3mall.jpg",
+            "/images/prop3pics4mall.jpg",
+            "/images/prop3pics5mall.jpg",
+            "/images/prop3pics6mall.jpg"
+          ],
+          "url":"properties/prop3.html",
+          "added": {
+            "month":"December",
+            "day":5,
+            "year":2025
+          }
+        },
+        {
+          "id":"prop4",
+          "type":"Flat",
+          "bedrooms":1,
+          "price":285000,
+          "tenure":"Freehold",
+          "description":"Modern one bedroom apartment situated in a sought-after development with excellent transport links. This purpose-built flat offers comfortable living space with an open-plan kitchen/living room, a spacious double bedroom with built-in storage, and a contemporary bathroom suite. The property benefits from electric heating, double glazing, and secure entry phone system. Additional features include one allocated parking space and access to communal gardens. The apartment is ideal for first-time buyers or investors, being conveniently located close to Westminster tube station and local amenities including shops, restaurants, and parks.",
+          "location":"Westminster Road, London",
+          "picture":[
+            "/images/prop4pic1small.jpg",
+            "/images/prop4pics2mall.jpg",
+            "/images/prop4pics3mall.jpg",
+            "/images/prop4pics4mall.jpg",
+            "/images/prop4pics5mall.jpg",
+            "/images/prop4pics6mall.jpg"
+          ],
+          "url":"properties/prop4.html",
+          "added": {
+            "month":"October",
+            "day":18,
+            "year":2025
+          }
+        },
+        {
+          "id":"prop5",
+          "type":"House",
+          "bedrooms":5,
+          "price":950000,
+          "tenure":"Freehold",
+          "description":"Stunning five bedroom executive detached house set in a prestigious location with beautiful views. This impressive family home features a grand entrance hall, spacious living room with French doors to the garden, formal dining room, family room, and a luxury fitted kitchen/breakfast room with integrated appliances and granite worktops. The ground floor also includes a separate utility room and guest cloakroom. To the first floor, the master bedroom suite boasts a dressing area and luxurious en-suite bathroom, while four further double bedrooms are complemented by a family bathroom. The property sits on a generous plot with landscaped gardens, a detached double garage, and ample off-street parking. Additional features include underfloor heating, home office, and high-specification throughout.",
+          "location":"Richmond Hill, Richmond",
+          "picture":[
+            "/images/prop5pic1small.jpg",
+            "/images/prop5pic2small.jpg",
+            "/images/prop5pic3small.jpg",
+            "/images/prop5pic4small.jpg",
+            "/images/prop5pic5small.jpg",
+            "/images/prop5pic6small.jpg"
+          ],
+          "url":"properties/prop5.html",
+          "added": {
+            "month":"November",
+            "day":14,
+            "year":2025
+          }
+        },
+        {
+          "id":"prop6",
+          "type":"Flat",
+          "bedrooms":3,
+          "price":975000,
+          "tenure":"Freehold",
+          "description":"Beautifully presented three bedroom penthouse apartment offering stunning panoramic views across the area. This exceptional property occupies the entire top floor and features a spacious reception room with floor-to-ceiling windows leading to a private balcony, a contemporary fitted kitchen with high-end appliances, three well-proportioned bedrooms including a master with en-suite, and a stylish family bathroom. The apartment benefits from secure underground parking for two vehicles, a storage unit, lift access, and use of communal gardens. Located in a modern development close to excellent schools, local shops, and transport links. The property is presented in immaculate condition and must be viewed to be fully appreciated.",
+          "location":"Park Lane, Croydon",
+          "picture":[
+            "/images/prop6pic1small.jpg",
+            "/images/prop6pic2small.jpg",
+            "/images/prop6pic3small.jpg",
+            "/images/prop6pic4small.jpg",
+            "/images/prop6pic5small.jpg",
+            "/images/prop6pic6small.jpg"
+          ],
+          "url":"properties/prop6.html",
+          "added": {
+            "month":"September",
+            "day":8,
+            "year":2025
+          }
+        },
+        {
+          "id":"prop7",
+          "type":"House",
+          "bedrooms":2,
+          "price":485000,
+          "tenure":"Freehold",
+          "description":"Charming two bedroom Victorian cottage full of character and period features. This delightful property retains many original features including exposed wooden beams, feature fireplaces, and sash windows. The accommodation comprises an entrance porch, cosy living room with wood-burning stove, separate dining room, and a fitted kitchen with door to the rear garden. Upstairs, there are two double bedrooms and a family bathroom with period-style fittings. The property benefits from a private rear garden with mature shrubs and trees, providing a peaceful retreat. There is also a useful outbuilding/workshop and off-street parking to the front. Situated in a popular village location within easy reach of local amenities and good schools.",
+          "location":"Manor Road, Becknenham",
+          "picture":[
+            "/images/prop7pic1small.jpg",
+            "/images/prop7pic2small.jpg",
+            "/images/prop7pic3small.jpg",
+            "/images/prop7pic4small.jpg",
+            "/images/prop7pic5small.jpg",
+            "/images/prop7pic6small.jpg"
+          ],
+          "url":"properties/prop7.html",
+          "added": {
+            "month":"June",
+            "day":30,
+            "year":2025
+          }
+        },
+        {
+          "id":"prop8",
+          "type":"House",
+          "bedrooms":3,
+          "price":598000,
+          "tenure":"Freehold",
+          "description":"An impressive three-bedroom detached residence situated on a generous corner plot in a quiet cul-de-sac. The ground floor offers a grand entrance hall leading to a spacious lounge with an elegant bay window, a dedicated home office, and a magnificent open-plan kitchen/diner with bi-fold doors opening onto a landscaped rear garden. Upstairs, three well-proportioned bedrooms provide ample storage, accompanied by a luxury family bathroom. The property includes an attached double garage and a multi-car driveway. Located within the catchment area of highly-rated primary schools and local parks.",
+          "location":"Old Trafford, Manchester",
+          "picture":[
+            "/images/prop8pic1small.jpg",
+            "/images/prop8pic2small.jpg",
+            "/images/prop8pic3small.jpg",
+            "/images/prop8pic4small.jpg",
+            "/images/prop8pic5small.jpg",
+            "/images/prop8pic6small.jpg"
+          ],
+          "url":"properties/prop8.html",
+          "added": {
+            "month":"April",
+            "day":16,
+            "year":2025
+          }
         }
-]}
+    ]}

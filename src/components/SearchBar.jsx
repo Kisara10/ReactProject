@@ -3,9 +3,6 @@ import React from "react";
 const SearchBar = () => {
     return (
         <section>
-            <h1>Search your Dream House in Hear</h1>
-            <h3>Search by the way you like</h3>
-
             <form>
                 <div className="form">
                     <label htmlFor="type">Property Type: </label>

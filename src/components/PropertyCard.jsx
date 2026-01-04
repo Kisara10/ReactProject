@@ -6,12 +6,10 @@ const PropertyCard = ({property, onAddToFavourites}) => {
     return(
         <div className="Property-card">
 
-            <div className="Property-image">
-                <Link to={`/property/${property.id}`}>
-                    <img src={property.picture[0]} alt="property" />
-                </Link>
+            <Link to={`/property/${property.id}`}>
+                <img src={property.picture[0]} alt="property" />
+            </Link>
 
-            </div>
 
             <div className="Property-card-content">
                 <h3>${property.price.toLocaleString()}</h3>
