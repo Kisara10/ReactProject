@@ -9,7 +9,7 @@ const PropertyDetails = () => {
     const [property, setProperty] = useState(null);
 
     useEffect(() => {
-        fetch("/properties(1).json")
+        fetch("./properties(1).json")
         .then(res => res.json())
         .then(data => {
             const found = data.properties.find(p => p.id === id);
