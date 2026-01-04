@@ -22,15 +22,9 @@ const PropertyDetails = () => {
     }
     return (
 
-        <div className="Property-Details">
+        <div className="property-details">
 
-            <Link to="/">Back to search</Link>
             <ImageGallery picture={property.picture} />
-            <div className="Property-header">
-                <h2>${property.price.toLocaleString()}</h2>
-                <p>{property.bedrooms} Bedroom {property.type}</p>
-                <p>{property.location}</p>
-            </div>
 
             <PropertyTabs property={property} />
         </div>

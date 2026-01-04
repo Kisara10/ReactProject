@@ -12,7 +12,7 @@ const PropertyCard = ({property, onAddToFavourites}) => {
 
 
             <div className="Property-card-content">
-                <h3>${property.price.toLocaleString()}</h3>
+                <h3>£{property.price.toLocaleString()}</h3>
                 <p>{property.bedrooms} Bedroom {property.type}</p>
                 <p>{property.location}</p>
             </div>

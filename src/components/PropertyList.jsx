@@ -6,7 +6,7 @@ const PropertyList = ({properties, onAddToFavourites}) => {
     return (
         <div className="PCard-list">
             <div className="results-side">
-                <h2>Available Properties ({properties.length}</h2>
+                <h2>Available Properties ({properties.length})</h2>
             </div>
 
             <div className="property-grid">

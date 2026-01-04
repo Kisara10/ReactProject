@@ -19,8 +19,29 @@ const SearchPage = () => {
     }, []);
 
     /* Search function, search properties based on searchers */
-    const handleSearch = () => {
-        setFiltered(properties);
+    const handleSearch = (filters) => {
+        const result = properties.filter(property =>{
+
+            if (filters.type !== "any" && property.type !== filters.type) {
+                return false;
+            }
+
+            if (filters.minPrice && property.price < Number(filters.minPrice)) {
+                return false;
+            }
+
+            if (filters.maxPrice && property.price > Number(filters.maxPrice)){
+                return false;
+            }
+
+            if (filters.bedrooms && property.bedrooms < Number(filters.bedrooms)){
+                return false;
+            }
+
+            return true;
+        });
+
+        setFiltered(result);
     };
 
     /* Add to favourites */

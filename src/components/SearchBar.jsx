@@ -1,37 +1,54 @@
-import React from "react";
+import React, {useState} from "react";
 
-const SearchBar = () => {
+const SearchBar = ({onSearch}) => {
+
+    const [filters, setFilters] = useState({
+        type: "any",
+        minPrice: "",
+        maxPrice: "",
+        bedrooms: ""
+    });
+
+    const handleChange = (e) => {
+        setFilters({
+            ...filters,
+            [e.target.name]: e.target.value
+        });
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSearch(filters);   // send filters to parent
+    }
     return (
         <section>
-            <form>
+
+            <h3>Search Properties</h3>
+            <form onSubmit={handleSubmit}>
                 <div className="form">
-                    <label htmlFor="type">Property Type: </label>
-                    <select type="text" name="type">
-                        <option value="house">House</option>
-                        <option value="flat">Flat</option>
+                    <label>Property Type</label>
+                    <select name="type" value={filters.type} onChange={handleChange}>
                         <option value="any">Any</option>
+                        <option value="House">House</option>
+                        <option value="Flat">Flat</option>
                     </select>
                 </div>
 
                 <div className="form">
-                    <label htmlFor="minPrice">Min Price: </label>
-                    <input type="number" id="minPrice" name="minPrice" placeholder="$0" />
+                    <label>Min Price: </label>
+                    <input type="number" id="minPrice" name="minPrice" value={filters.minPrice} onChange={handleChange} />
                 </div>
 
                 <div className="form">
-                    <label htmlFor="maxPrice">Max Price: </label>
-                    <input type="number" id="maxPrice" name="maxPrice" placeholder="$1000000" />
+                    <label>Max Price: </label>
+                    <input type="number" id="maxPrice" name="maxPrice" value={filters.maxPrice} onChange={handleChange} />
                 </div>
 
                 <div className="form">
-                    <label htmlFor="Bedrooms">Bedrooms: </label>
-                    <input type="number" id="bedrooms" name="minbedrooms" min="1" />
+                    <label>Bedrooms: </label>
+                    <input type="number" id="bedrooms" name="bedrooms" value={filters.bedrooms} onChange={handleChange} />
                 </div>
 
-                <div className="form">
-                    <label htmlFor="dateAdded">Date Added </label>
-                    <input type="date" id="dateAdded" name="dateAdded" />
-                </div>
 
                 <button type="submit">Search</button>
 
