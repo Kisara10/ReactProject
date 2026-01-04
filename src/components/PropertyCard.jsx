@@ -1,19 +1,31 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const PropertyCard = ({property, onAddToFavourites}) => {
 
     return(
-        <div className="Propertycard">
+        <div className="Property-card">
 
-            <img src={property.picture[0]} alt="property" />
+            <div className="Property-image">
+                <Link to={`/property/${property.id}`}>
+                    <img src={property.picture[0]} alt="property" />
+                </Link>
 
-            <h3>${property.price.toLocaleString()}</h3>
-            <p>{property.bedrooms} Bedroom {property.type}</p>
-            <p>{property.location}</p>
+            </div>
+
+            <div className="Property-card-content">
+                <h3>${property.price.toLocaleString()}</h3>
+                <p>{property.bedrooms} Bedroom {property.type}</p>
+                <p>{property.location}</p>
+            </div>
 
             <button onClick={() => onAddToFavourites(property)}>
                 Add to Favourites
             </button>
+
+            <Link to={`/property/${property.id}`}>
+                <button className="btn-view">View Details</button>
+            </Link>
 
         </div>
     );

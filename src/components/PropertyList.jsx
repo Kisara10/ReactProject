@@ -14,7 +14,8 @@ const PropertyList = ({properties, onAddToFavourites}) => {
                     <PropertyCard
                         key={property.id}
                         property={property}
-                        onAddToFavourites={onAddToFavourites} />
+                        onAddToFavourites={onAddToFavourites}
+                    />
                 ))}
             </div>
 

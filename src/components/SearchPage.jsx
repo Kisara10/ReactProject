@@ -59,6 +59,7 @@ const SearchPage = () => {
                     favourites={favourites}
                     onRemove={removeFromFavourites}
                     onClear={clearFavourites}/>
+
             </div>
         </div>
     );
