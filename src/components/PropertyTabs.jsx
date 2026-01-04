@@ -14,8 +14,6 @@ const PropertyTabs = ({property}) => {
                 <p>{property.bedrooms} Bedroom {property.type}</p>
             </div>
 
-            <button className="fav-btn">Add to Favourite</button>
-
             <div className="Tab-buttons">
                 <button onClick={() => setActiveTab("description")}>Description</button>
                 <button onClick={() => setActiveTab("details")}>Details</button>

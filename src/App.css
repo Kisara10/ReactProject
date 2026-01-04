@@ -1,42 +1,7 @@
 .search-page{
-  width: 100%;
-}
-
-section{
-  width: 100%;
-  background: #1E2533;
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 40px;
-}
-
-section  form{
-  display: flex;
-  align-items: flex-end;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.form input,
-.form select{
-  width: 100%;
-  padding: 5px;
-  background: black;
-  border-radius: 8px;
-  border: 1px solid #1E2533;
-}
-
-section button{
-  padding: 12px;
-  border-radius: 10px;
-  background: #1E2533;
-  color: white;
-  cursor: pointer;
-  height: 44px;
-}
-
-section button:hover{
-  background: black;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 24px;
 }
 
 .main-content{
@@ -51,25 +16,37 @@ section button:hover{
 
 }
 .header h1{
-  margin: 0;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+.header h3{
+  font-weight: 400;
+  opacity: 0.85;
 }
 
 .property-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 30px;
+  justify-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .Property-card{
+  width: 100%;
+  max-width: 320px;
+  background: #1c2536;
   border-radius: 20px;
-  padding:10px;
-  background-color: #1E2533;
+  padding:14px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  justify-self: center;
 }
 
 .Property-card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .Property-card img{
@@ -128,16 +105,20 @@ section button:hover{
 
 .Tab-buttons{
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px
+}
+
+.Tab-buttons button{
+  padding: 8px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
 .property-details{
   display: grid;
   grid-template-columns: 2fr 1.2fr;
   gap: 32px;
-  margin-top: 30px;
-  align-items: start;
 }
 
 .property-image{
@@ -166,6 +147,128 @@ section button:hover{
   background: white;
   padding: 10px;
 }
+
+.search-bar{
+  max-width: 1200px;
+  background: #1c2536;
+  padding: 30px;
+  border-radius: 16px;
+  margin: 0 auto 50px auto;
+}
+
+.search-bar form{
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.form input,
+.form select{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #0f172a;
+  color: white;
+}
+
+.search-bar button{
+  padding: 10px 22px;
+  background: #38bdf8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-bar button:hover{
+  background: #0ea5e9;
+}
+
+.results-side{
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.favourite-list{
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .search-bar form{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .property-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header h1{
+    font-size: 2.2rem;
+  }
+
+  .search-bar{
+    padding: 20px;
+  }
+
+  .search-bar form{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form{
+    width: 100%;
+  }
+
+  .search-bar button{
+    width: 100%;
+  }
+
+  .property-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .Property-card{
+    max-width: 100%;
+  }
+
+  .property-tabs{
+    width: 100%;
+    padding: 18px;
+  }
+
+  .SubImage{
+    overflow-x: auto;
+  }
+
+  .SubImage img{
+    flex-shrink: 0;
+  }
+}
+
+@media(max-width: 900px) {
+  .property-details{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
