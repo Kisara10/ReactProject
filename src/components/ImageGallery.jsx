@@ -13,7 +13,7 @@ const ImageGallery = ({picture}) =>{
              {picture.map((image, index) => (
                  <img
                  key={index}
-                 src={image}
+                 src={`${import.meta.env.BASE_URL}${image}`}
                  alt="property view"
                  onClick={() => setMainImage(image)}
                  />

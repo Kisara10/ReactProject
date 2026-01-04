@@ -7,7 +7,7 @@ const PropertyCard = ({property, onAddToFavourites}) => {
         <div className="Property-card">
 
             <Link to={`/property/${property.id}`}>
-                <img src={property.picture[0]} alt="property" />
+                <img src={`${import.meta.env.BASE_URL}${property.picture[0]}`} alt="property" />
             </Link>
 
 
