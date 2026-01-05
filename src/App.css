@@ -10,6 +10,13 @@
   gap: 30px;
 }
 
+.search-page-wrapper,
+.property-details-page{
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+}
+
 .header {
   text-align: center;
   margin-bottom: 50px;
@@ -140,9 +147,12 @@ body{
 }
 
 .property-tabs{
+  width: 100%;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.08);
   padding: 24px;
   border-radius: 20px;
+  overflow: hidden;
 }
 .property-info{
   background: rgba(255, 255, 255, 0.08);
@@ -153,11 +163,25 @@ body{
 .map-container,
 .floorplan{
   margin-top: 16px;
+  width: 100%;
+}
+
+.map-container iframe{
+  width: 100%;
+  max-width: 100%;
+  height: 280px;
+  border: 0;
+  border-radius: 12px;
+  display: block;
 }
 
 .floorplan img{
+  width: 100%;
+  max-height: 100%;
   background: white;
   padding: 10px;
+  border-radius: 12px;
+  display: block;
 }
 
 .search-bar{
@@ -263,16 +287,46 @@ body{
 
   .property-tabs{
     width: 100%;
-    padding: 18px;
+    padding: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .tab-content{
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .Tab-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .Tab-buttons button{
+    flex: 1 1 45%;
+    min-width: 120px;
   }
 
   .SubImage{
+    display: flex;
+    gap: 8px;
     overflow-x: auto;
+    padding-bottom: 6px;
   }
 
   .SubImage img{
     flex-shrink: 0;
   }
+
+  .map-container iframe{
+    height: 220px;
+  }
+
+  .floorplan img{
+    padding: 8px;
+  }
+
 }
 
 @media(max-width: 900px) {

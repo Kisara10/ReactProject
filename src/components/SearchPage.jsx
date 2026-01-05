@@ -63,26 +63,29 @@ const SearchPage = () => {
     };
 
     return (
-        <div className="search-page">
-            <header className="header">
-                <h1>Property Search</h1>
-                <h3>Welcome to Property Search we will help you to find your dream house </h3>
-            </header>
+        <div className="search-page-wrapper">
+            <div className="search-page">
+                <header className="header">
+                    <h1>Property Search</h1>
+                    <h3>Welcome to Property Search we will help you to find your dream house </h3>
+                </header>
 
-            <div className="main-content">
-                <SearchBar onSearch={handleSearch} />
+                <div className="main-content">
+                    <SearchBar onSearch={handleSearch} />
 
-                <PropertyList
-                    properties={filtered}
-                    onAddToFavourites={addToFavourites}/>
+                    <PropertyList
+                        properties={filtered}
+                        onAddToFavourites={addToFavourites}/>
 
-                <FavouriteList
-                    favourites={favourites}
-                    onRemove={removeFromFavourites}
-                    onClear={clearFavourites}/>
+                    <FavouriteList
+                        favourites={favourites}
+                        onRemove={removeFromFavourites}
+                        onClear={clearFavourites}/>
 
+                </div>
             </div>
         </div>
+
     );
 }
 

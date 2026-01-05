@@ -22,12 +22,15 @@ const PropertyDetails = () => {
     }
     return (
 
-        <div className="property-details">
+        <div className="property-details-page">
+            <div className="property-details">
 
-            <ImageGallery picture={property.picture} />
+                <ImageGallery picture={property.picture} />
 
-            <PropertyTabs property={property} />
+                <PropertyTabs property={property} />
+            </div>
         </div>
+
 
     );
 }
