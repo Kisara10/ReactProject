@@ -2,12 +2,13 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const PropertyCard = ({property, onAddToFavourites}) => {
+    const baseUrl = (window.__BASE_URL__ || "").replace(/\$/,"");
 
     return(
         <div className="Property-card">
 
             <Link to={`/property/${property.id}`}>
-                <img src={`${import.meta.env.BASE_URL}${property.picture[0]}`} alt="property" />
+                <img src={`${baseUrl}${property.picture[0]}`} alt="property" />
             </Link>
 
 
